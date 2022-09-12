@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "./components/Navigation";
 import ProductCarousel from "./components/ProductCarousel";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   const [cartItems, setCartItems] = useState([
@@ -21,6 +22,7 @@ function App() {
     <main>
       <Navigation cartItems={cartItems} />
       <ProductCarousel />
+      <ProductDetails />
     </main>
   );
 }
