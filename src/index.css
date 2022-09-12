@@ -223,3 +223,27 @@ nav {
   font-size: 1rem;
 }
 
+.carousel{
+  height: 18rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-btn{
+  position: absolute;
+  top: 40%;
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.previous{
+  left: 1rem;
+}
+
+.next{
+  right: 1rem;
+}
