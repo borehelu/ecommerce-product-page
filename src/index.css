@@ -158,6 +158,8 @@ nav {
 .cart{
   width: 95vw;
   position: absolute;
+  z-index: 100;
+  background-color: var(--white);
   top: 4rem;
   padding: .8rem;
   border-radius: .5rem;
