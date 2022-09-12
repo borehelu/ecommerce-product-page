@@ -203,8 +203,14 @@ nav {
 .list .details p{
   margin: 0;
   text-align: left;
+  
+}
+
+.list .details span{
   font-size: 1rem;
 }
+
+
 
 .list .delete-cart{
   padding: .5rem;
@@ -215,7 +221,7 @@ nav {
 .list .total{
   color: var(--very-dark-blue);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .checkout-btn{
@@ -292,12 +298,13 @@ nav {
 .discounted-price{
   font-size: 1.8rem;
 }
+
 .discount{
   color: var(--orange);
   font-weight: 700;
   font-size: 1.2rem;
 }
-.price{
+.pricing .price{
   font-weight: 700;
   color: #888;
   font-size: 1.2rem;
@@ -310,7 +317,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.quantity{
+.quantity-wrapper .quantity{
   font-weight: 700;
   font-size: 1.2rem;
 }
