@@ -43,7 +43,7 @@ function NavList({isVisible,setIsVisible}) {
           </li>
         </ul>
       </nav>
-      <div className={`nav-overlay ${visibility} `}></div>
+      <div className={`nav-overlay ${visibility} `} onClick={()=>setIsVisible(!isVisible)}></div>
     </>
   );
 }

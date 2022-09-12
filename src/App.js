@@ -1,8 +1,29 @@
+import { useState } from "react";
+import Navigation from "./components/Navigation";
+import ProductCarousel from "./components/ProductCarousel";
 
 function App() {
+  const [cartItems, setCartItems] = useState([
+    {
+      name: "Fall Limited Edition Sneakers",
+      image: "",
+      price: 125,
+      quantity: 3,
+    },
+    {
+      name: "Fall Limited Edition Sneakers",
+      image: "",
+      price: 125,
+      quantity: 3,
+    }
+  ]);
   return (
-   <h1>Hello World</h1>
+    <main>
+      <Navigation cartItems={cartItems} />
+      <ProductCarousel />
+    </main>
   );
 }
 
 export default App;
+
