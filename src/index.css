@@ -203,6 +203,7 @@ nav {
 .list .details p{
   margin: 0;
   text-align: left;
+  font-size: 1rem;
 }
 
 .list .delete-cart{
@@ -214,6 +215,7 @@ nav {
 .list .total{
   color: var(--very-dark-blue);
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .checkout-btn{

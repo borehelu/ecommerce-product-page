@@ -4,28 +4,39 @@ import ProductCarousel from "./components/ProductCarousel";
 import ProductDetails from "./components/ProductDetails";
 
 function App() {
-  const [cartItems, setCartItems] = useState([
+  const [products, setProducts] = useState([
     {
+      id: 1,
       name: "Fall Limited Edition Sneakers",
-      image: "",
-      price: 125,
+      images: [
+        "/images/image-product-1.jpg",
+        "/images/image-product-2.jpg",
+        "/images/image-product-3.jpg",
+        "/images/image-product-4.jpg",
+      ],
+      thumbnail: [
+        "/images/image-product-1-thumbnail.jpg",
+        "/images/image-product-2-thumbnail.jpg",
+        "/images/image-product-3-thumbnail.jpg",
+        "/images/image-product-4-thumbnail.jpg",
+      ],
+      company: "sneaker company",
+      price: 250,
+      discount: 50,
       quantity: 3,
+      description: `These low-profile sneakers are your perfect casual wear companion.
+      Featuring a durable rubber outer sole, they'll withstand everything the
+      weather can offer.`,
     },
-    {
-      name: "Fall Limited Edition Sneakers",
-      image: "",
-      price: 125,
-      quantity: 3,
-    }
   ]);
+  const [cartItems, setCartItems] = useState([{ product_id: 1, quantity: 3 }]);
   return (
     <main>
-      <Navigation cartItems={cartItems} />
+      <Navigation cartItems={cartItems} product={products} />
       <ProductCarousel />
-      <ProductDetails />
+      <ProductDetails product={products[0]} setCartItems={setCartItems} />
     </main>
   );
 }
 
 export default App;
-

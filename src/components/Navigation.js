@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavList from "./NavList";
 import Cart from "./Cart";
 
-function Navigation({cartItems}) {
+function Navigation({cartItems,product}) {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isCartVisible, setIsCartVisible] = useState(false);
 
@@ -44,7 +44,7 @@ function Navigation({cartItems}) {
         </div>
       </div>
 
-      <Cart isCartVisible={isCartVisible} cartItems={cartItems}/> 
+      <Cart isCartVisible={isCartVisible} product={product} cartItems={cartItems}/> 
     
     </header>
   );
