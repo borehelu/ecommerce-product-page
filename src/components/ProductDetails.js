@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ProductDetails() {
+  const [quantity, setQuantity] = useState(0);
+  function decreaseQuantity() {
+    if (quantity > 0) {
+      setQuantity((prev) => prev - 1);
+    } else {
+      setQuantity(0);
+    }
+  }
+  function increaseQuantity() {
+    setQuantity((prev) => prev + 1);
+  }
   return (
     <div className="product-details">
       <h3 className="product-company">Sneaker company</h3>
@@ -11,16 +22,16 @@ function ProductDetails() {
         weather can offer.
       </p>
       <div className="pricing">
-        <h2 className="price">$125.00</h2>
+        <h2 className="discounted-price">$125.00</h2>
         <p className="discount">50%</p>
         <p className="price">$250.00</p>
       </div>
       <div className="quantity-wrapper">
-        <button className="decrease">
+        <button className="decrease" onClick={decreaseQuantity}>
           <img src="/images/icon-minus.svg" alt="decrease icon" />
         </button>
-        <p className="quantity">0</p>
-        <button className="increase">
+        <p className="quantity">{quantity}</p>
+        <button className="increase" onClick={increaseQuantity}>
           <img src="/images/icon-plus.svg" alt="increase icon" />
         </button>
       </div>
