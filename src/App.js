@@ -30,11 +30,18 @@ function App() {
     },
   ]);
   const [cartItems, setCartItems] = useState([{ product_id: 1, quantity: 3 }]);
+
+  function addToCart(productId,quantity){
+    console.log(productId,quantity);
+    let newCart = [...cartItems,{product_id: productId,quantity:quantity}];
+    console.log(newCart);
+    setCartItems(newCart);
+  }
   return (
     <main>
       <Navigation cartItems={cartItems} product={products} />
       <ProductCarousel />
-      <ProductDetails product={products[0]} setCartItems={setCartItems} />
+      <ProductDetails product={products[0]} addToCart={addToCart} />
     </main>
   );
 }
