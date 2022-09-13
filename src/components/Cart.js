@@ -1,13 +1,12 @@
 import React from "react";
 
-function Cart({ isCartVisible, cartItems, product }) {
+function Cart({ isCartVisible, cartItems, product, removeFromCart }) {
   function getProductObject(cartItem){
     return product.filter((product) => product.id === cartItem.product_id)[0];
 
   }
 
-  console.log(getProductObject(cartItems[0]))
-
+  
   return (
     <div className={`cart ${isCartVisible ? "show" : "hide"}`}>
       <h3>Cart</h3>
@@ -43,7 +42,7 @@ function Cart({ isCartVisible, cartItems, product }) {
                   </span>
                 </p>
               </div>
-              <button className="delete-cart"></button>
+              <button className="delete-cart" onClick={()=>removeFromCart(item.product_id)}></button>
             </div>
           );
         })
