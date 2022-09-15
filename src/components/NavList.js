@@ -5,7 +5,7 @@ function NavList({isVisible,setIsVisible}) {
 
   return (
     <>
-      <nav className={visibility} >
+      <nav className={`${visibility}`} >
         <button className="close" onClick={()=>setIsVisible(false)}>
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
